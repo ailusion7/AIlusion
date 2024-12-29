@@ -86,6 +86,13 @@
             color: white;
         }
     </style>
+    <script>
+        // Función para redirigir después de enviar el formulario
+        function redirectToEncargar(event) {
+            event.preventDefault(); // Evita el envío tradicional del formulario
+            window.location.href = 'encargar.html'; // Redirige a la página de encargar
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -103,12 +110,12 @@
     </nav>
     <main>
         <section id="encargar">
-          <h2>Sube tu contenido personalizado</h2>
-            <form action="/upload" method="post" enctype="multipart/form-data">
-                <label for="imageUpload">Subir una imagen:</label><br>
+            <h2>Sube tu contenido personalizado</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="redirectToEncargar(event)">
+                <label for="imageUpload">Subir una imagen para tu peluche:</label><br>
                 <input type="file" id="imageUpload" name="imageUpload" accept="image/*"><br>
 
-                <label for="audioUpload">Subir un audio o video:</label><br>
+                <label for="audioUpload">Subir un audio o video para la voz de tu peluche:</label><br>
                 <input type="file" id="audioUpload" name="audioUpload" accept="audio/*,video/*"><br>
 
                 <button type="submit" class="btn">Enviar</button>
@@ -121,3 +128,4 @@
     </footer>
 </body>
 </html>
+
