@@ -109,18 +109,23 @@
         <a href="contacto.html">Contacto</a>
     </nav>
     <main>
-        <section id="encargar">
-            <h2>Sube tu contenido personalizado</h2>
+       <section id="encargar">
+            <h2>Para encargar sube una imagen para el peluche y un video o audio para la voz, además, agrega tu contacto y nuestro agente de venta se contactará a la brevedad</h2>
             <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="redirectToEncargar(event)">
                 <label for="imageUpload">Subir una imagen para tu peluche:</label><br>
                 <input type="file" id="imageUpload" name="imageUpload" accept="image/*"><br>
-
+        
                 <label for="audioUpload">Subir un audio o video para la voz de tu peluche:</label><br>
                 <input type="file" id="audioUpload" name="audioUpload" accept="audio/*,video/*"><br>
-
+        
+                <!-- Campo para agregar el número de contacto -->
+                <label for="contactNumber">Número de contacto:</label><br>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="Ej: +34 612 345 678" pattern="[+]{1}[0-9]{1,4}[ ]?([0-9]{9,15})" required><br>
+        
                 <button type="submit" class="btn">Enviar</button>
             </form>
         </section>
+
     </main>
     <a href="encargar.html" class="btn">Encargar peluche</a>
     <footer>
