@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIlussion - Peluches Personalizados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #6c63ff;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #6c63ff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        h1, h2 {
+            color: #6c63ff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form button {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #574bdb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AIlussion</h1>
+        <p>Peluches personalizados que hablan y cuidan el planeta</p>
+    </header>
+
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#personalizacion">Personalización</a>
+    </nav>
+
+    <div class="container">
+        <section id="productos" class="section">
+            <h2>Galería de Productos</h2>
+            <p>Descubre nuestros peluches personalizados. Cada uno es único y creado con materiales sustentables.</p>
+            <input type="file" accept="image/*" multiple>
+        </section>
+
+        <section id="personalizacion" class="section">
+            <h2>Personaliza tu Peluche</h2>
+            <p>Súbenos tu foto y un archivo de audio o video para crear un peluche único para ti.</p>
+            <form>
+                <label for="foto">Sube una foto:</label>
+                <input type="file" id="foto" accept="image/*">
+
+                <label for="archivo">Sube un audio o video:</label>
+                <input type="file" id="archivo" accept="audio/*,video/*">
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AIlussion - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
